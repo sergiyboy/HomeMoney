@@ -15,8 +15,8 @@
         android:layout_marginLeft="3dp"
         android:layout_marginRight="3dp"
 
-        android:layout_marginBottom="50dp"
-        android:background="#FAFAFA"
+        android:layout_marginBottom="5dp"
+        android:background="#EDF0EE"
         android:paddingBottom="4dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"

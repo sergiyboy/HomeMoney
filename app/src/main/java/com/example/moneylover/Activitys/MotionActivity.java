@@ -125,8 +125,8 @@ public class MotionActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     public void setPurse(View view) {
-        Intent motionIntent =new Intent(MotionActivity.this, MotionActivity.class);
-        startActivity(motionIntent);
+        //Intent motionIntent =new Intent(MotionActivity.this, MotionActivity.class);
+        //startActivity(motionIntent);
 
     }
 

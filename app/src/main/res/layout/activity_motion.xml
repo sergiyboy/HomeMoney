@@ -4,12 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EDF0EE"
     android:orientation="vertical"
     android:padding="5dp"
     tools:context=".Activitys.MotionActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
+        android:background="@android:color/background_light"
         android:orientation="horizontal">
 
         <TextView
@@ -17,34 +20,78 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
+            android:inputType="date"
             android:onClick="setData"
-            android:textSize="25sp"
-            android:inputType="date" />
+            android:textColor="@color/colorText"
+            android:textSize="25sp" />
 
         <EditText
             android:id="@+id/purseName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:onClick="setPurse" />
+            android:onClick="setPurse"
+            android:textColor="@color/colorText" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_marginTop="10dp"
+        android:background="@android:color/background_light"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/categoryEdit"
-            android:layout_width="100dp"
+        <ImageView
+            android:id="@+id/amountEdit"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/sum" />
+
+        <EditText
+            android:id="@+id/amountName"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:onClick="setCategory"
-            android:text="Категория"
-            android:textSize="15dp" />
+            android:layout_weight="2"
+            android:ems="10"
+            android:hint="Укажите сумму"
+            android:inputType="numberDecimal"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorHints"
+            android:textSize="25dp" />
 
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="saveMotion"
+            app:backgroundTint="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_menu_send" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+
+        android:onClick="setCategory"
+        android:background="@android:color/background_light"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/categoryEdit"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@android:drawable/ic_search_category_default" />
         <TextView
             android:id="@+id/categoryName"
             android:layout_width="wrap_content"
@@ -54,74 +101,41 @@
             android:gravity="start|bottom"
             android:hint="выберите категорию"
             android:inputType="textMultiLine|textCapSentences"
+            android:lineSpacingExtra="8sp"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorHints"
             android:onClick="setCategory"
+
             android:textSize="25dp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="?attr/colorButtonNormal"
-        android:onClick="setCategory"
+        android:layout_marginTop="2dp"
+        android:layout_height="150dp"
+        android:background="@android:color/background_light"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/amountEdit"
-            android:layout_width="100dp"
+        <ImageView
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:text="Сумма" />
-
-        <EditText
-            android:id="@+id/amountName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:ems="10"
-            android:hint="Укажите сумму"
-            android:inputType="numberDecimal" />
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-
-            android:layout_marginRight="16dp"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:onClick="saveMotion"
-            app:fabSize="normal"
-            app:layout_anchorGravity="bottom|right"
-            app:srcCompat="@drawable/ic_menu_send" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="40dp">
-
-        <TextView
-            android:id="@+id/comentEdit"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="clip_vertical"
-            android:text="Примечание:" />
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/coment" />
 
         <EditText
             android:id="@+id/comentName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_weight="3"
-            android:gravity="bottom|start"
+            android:gravity="top"
             android:hint="коментарий"
             android:inputType="textMultiLine|textCapSentences"
             android:lines="2"
             android:maxLines="3"
             android:textAlignment="viewStart"
+            android:textColorHint="@color/colorHints"
             android:textStyle="bold" />
     </LinearLayout>
 
