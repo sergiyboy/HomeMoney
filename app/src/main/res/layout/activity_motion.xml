@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".Activitys.MotionActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:onClick="setData"
+            android:textSize="25sp"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/purseName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:onClick="setPurse" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/categoryEdit"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:onClick="setCategory"
+            android:text="Категория"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/categoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"
+            android:gravity="start|bottom"
+            android:hint="выберите категорию"
+            android:inputType="textMultiLine|textCapSentences"
+            android:onClick="setCategory"
+            android:textSize="25dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="?attr/colorButtonNormal"
+        android:onClick="setCategory"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/amountEdit"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Сумма" />
+
+        <EditText
+            android:id="@+id/amountName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:ems="10"
+            android:hint="Укажите сумму"
+            android:inputType="numberDecimal" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="saveMotion"
+            app:fabSize="normal"
+            app:layout_anchorGravity="bottom|right"
+            app:srcCompat="@drawable/ic_menu_send" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/comentEdit"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="clip_vertical"
+            android:text="Примечание:" />
+
+        <EditText
+            android:id="@+id/comentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="bottom|start"
+            android:hint="коментарий"
+            android:inputType="textMultiLine|textCapSentences"
+            android:lines="2"
+            android:maxLines="3"
+            android:textAlignment="viewStart"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</LinearLayout>
